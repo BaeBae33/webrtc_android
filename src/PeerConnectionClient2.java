@@ -64,8 +64,7 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import bank.app.GpApplication;
-import cn.changxinsoft.workgroup.RtxBaseActivity;
+
 import fi.vtt.nubomedia.utilitiesandroid.LooperExecutor;
 
 
@@ -582,7 +581,7 @@ public class PeerConnectionClient2 {
 
 		// Create video constraints if video call is enabled.
 		if (videoCallEnabled) {
-			videoCapturer = createVideoCapturer(RtxBaseActivity.mContext);
+			videoCapturer = createVideoCapturer(mContext);
 			if (videoCapturer == null) {
 				Log.w(TAG, "No camera on device. Switch to audio only call.");
 				videoCallEnabled = false;
